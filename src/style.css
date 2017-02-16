@@ -1,0 +1,86 @@
+/*@font-face {
+  font-family: "Courier Prime";
+  src: url(fonts/Courier-Prime.ttf);
+}*/
+
+@font-face {
+  font-family: 'Courier Prime';
+  src: url('fonts/courier-prime-webfont.woff2') format('woff2'),
+       url('fonts/courier-prime-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #181743;
+}
+
+.logo-wrap {
+  display: block;
+  position: relative;
+}
+
+.logo-hexagon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(0deg);
+  will-change: transform;
+}
+
+.logo-hexagon[data-animation] {
+  transition: transform 300ms;
+}
+
+.logo-hexagon > svg {
+  width: 120px;
+  height: auto;
+  transform: rotate(30deg);
+}
+
+.logo > svg {
+  width: 120px;
+  height: auto;
+}
+/*
+.logo {
+  width: 120px;
+  height: auto;
+}*/
+
+.title {
+  color: #07c2ff;
+  font-size: 36px;
+  font-family: 'Courier Prime', Courier, monospace;
+  line-height: 36px;
+  margin-top: 4px;
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #ff4772;
+  font-family: 'Courier Prime', Courier, monospace;
+  line-height: 20px;
+  font-style: italic;
+  margin-top: 8px;
+}
