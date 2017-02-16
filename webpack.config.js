@@ -18,7 +18,17 @@ module.exports = {
         loaders: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            { loader: 'css-loader' }
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: function() {
+                  return [
+                    require('autoprefixer')({ browsers: ['> 1%', 'IE >= 10'] })
+                  ];
+                }
+              }
+            }
           ]
         })
       },

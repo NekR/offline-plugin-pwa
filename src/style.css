@@ -15,6 +15,7 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .main {
@@ -24,6 +25,7 @@ html, body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 
   background: #181743;
 }
@@ -61,6 +63,7 @@ html, body {
 .logo > svg {
   width: 120px;
   height: auto;
+  max-height: 131px;
 }
 /*
 .logo {
@@ -74,6 +77,7 @@ html, body {
   font-family: 'Courier Prime', Courier, monospace;
   line-height: 36px;
   margin-top: 4px;
+  white-space: nowrap;
 }
 
 .sub-title {
@@ -83,4 +87,54 @@ html, body {
   line-height: 20px;
   font-style: italic;
   margin-top: 8px;
+  white-space: nowrap;
+}
+
+.offline-ready {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: white;
+  border: 1px solid #07c2ff;
+  border-left: 10px solid #07c2ff;
+  border-right: 0;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-right: 38px;
+
+  transform: translate3d(100%, 0, 0);
+  transition: transform 300ms;
+  will-change: transform;
+
+  user-select: none;
+}
+
+.offline-ready[data-open] {
+  transform: translate3d(0, 0, 0);
+}
+
+.offline-ready-close {
+  width: 36px;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.offline-ready-close svg {
+  width: 12px;
+  height: auto;
+  fill: #07c2ff;
 }
