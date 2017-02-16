@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "http-server ./dist -p 7474"
+    "start": "http-server ./dist -p 7474 -c no-cache"
   },
   "keywords": [],
   "author": "",
