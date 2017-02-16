@@ -1,6 +1,6 @@
 require('./style.css');
 
-const OfflinePlugin = require('offline-plugin/runtime');
+var OfflinePlugin = require('offline-plugin/runtime');
 
 OfflinePlugin.install({
   onInstalled: function() {
