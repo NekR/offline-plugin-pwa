@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const OfflinePlugin = require('offline-plugin');
+
 module.exports = {
   context: path.resolve('src'),
   entry: './main.js',
@@ -62,6 +64,31 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: 'favicons' }
-    ])
+    ]),
+    new OfflinePlugin({
+      safeToUseOptionalCaches: true,
+
+      caches: {
+        main: [
+          'main.js',
+          'main.css',
+          'index.html'
+        ],
+        additional: [
+          '*.woff',
+          '*.woff2'
+        ],
+        optional: [
+          ':rest:'
+        ]
+      },
+
+      ServiceWorker: {
+        events: true
+      },
+      AppCache: {
+        events: true
+      }
+    })
   ]
 };

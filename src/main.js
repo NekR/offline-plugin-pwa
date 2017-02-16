@@ -1,5 +1,24 @@
 require('./style.css');
 
+const OfflinePlugin = require('offline-plugin/runtime');
+
+OfflinePlugin.install({
+  onInstalled: function() {
+    openOfflineReady();
+  },
+
+  onUpdating: function() {
+
+  },
+
+  onUpdateReady: function() {
+    OfflinePlugin.applyUpdate();
+  },
+  onUpdated: function() {
+    window.location.reload();
+  }
+});
+
 var hexagon = document.querySelector('#hexagon');
 var offlineReady = document.querySelector('#offline-ready');
 var offlineReadyClose = document.querySelector('#offline-ready-close');

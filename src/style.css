@@ -91,7 +91,7 @@ html, body {
 }
 
 .offline-ready {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 0;
   background: white;
