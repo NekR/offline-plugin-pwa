@@ -1,7 +1,5 @@
 # `offline-plugin` PWA
 
-<img src="https://rawgit.com/NekR/offline-plugin/master/logo/logo.svg" width="120" alt="offline-plugin logo">
-
 This is a Progressive Web App built with `[offline-plugin](https://github.com/NekR/offline-plugin)` for `offline-plugin` to demonstrate its abilities and provide minimal example of its usage.
 
 ## Code references
@@ -10,6 +8,8 @@ This is a Progressive Web App built with `[offline-plugin](https://github.com/Ne
 * [`offline-plugin` runtime definition](https://github.com/NekR/offline-plugin-pwa/blob/master/src/main.js#L3)
 
 Built by [Arthur Stolyar](https://twitter.com/nekrtemplar)
+
+<img src="https://rawgit.com/NekR/offline-plugin/master/logo/logo.svg" width="120" alt="offline-plugin logo">
 
 ## License
 
