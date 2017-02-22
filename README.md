@@ -1,6 +1,6 @@
 # `offline-plugin` PWA
 
-This is a Progressive Web App built with `[offline-plugin](https://github.com/NekR/offline-plugin)` for `offline-plugin` to demonstrate its abilities and provide minimal example of its usage.
+This is a Progressive Web App built with [`offline-plugin`](https://github.com/NekR/offline-plugin) for `offline-plugin` to demonstrate its abilities and provide minimal example of its usage.
 
 ## Code references
 
