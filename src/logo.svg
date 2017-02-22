@@ -36,7 +36,7 @@
                     <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
                 </g>
             </g>
-            <g id="Combined-Shape" transform="translate(67.434013, 34.885958) rotate(279.000000) translate(-67.434013, -34.885958) ">
+            <g id="wifi-shape" transform="translate(67.434013, 34.885958) rotate(279.000000) translate(-67.434013, -34.885958) ">
                 <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
                 <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
             </g>

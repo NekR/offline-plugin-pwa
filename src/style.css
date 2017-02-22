@@ -1,3 +1,73 @@
+@keyframes offline-online {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 0;
+  }
+
+  16% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  62% {
+    opacity: 0;
+  }
+
+  64% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  84% {
+    opacity: 1;
+  }
+
+  86% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @font-face {
   font-family: 'Courier Prime';
   src: url('fonts/courier-prime-webfont.woff2') format('woff2'),
@@ -107,6 +177,16 @@ html, body {
   user-select: none;
 }
 
+.offline-ready code {
+  background: #efefef;
+  padding: 3px 5px;
+}
+
+.offline-ready a {
+  color: #07c2ff;
+  text-decoration: none;
+}
+
 .offline-ready[data-open] {
   transform: translate3d(0, 0, 0);
 }
@@ -127,4 +207,41 @@ html, body {
   width: 12px;
   height: auto;
   fill: #07c2ff;
+}
+
+.wifi-offline {
+  opacity: 0;
+  animation: offline-online 2000ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(17);
+}
+
+.wifi-online {
+  opacity: 1;
+  animation: offline-online 2000ms;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-timing-function: steps(17);
+}
+
+.source-code {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #016e92;;
+}
+
+.source-code svg {
+  width: 16px;
+  height: 16px;
+  fill: #016e92;
+  margin-left: 6px;
+  margin-top: -1px;
 }
