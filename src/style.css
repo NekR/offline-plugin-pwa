@@ -76,11 +76,16 @@
   font-style: normal;
 }
 
+html {
+  background: #181743;
+}
+
 html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /* Overflow hidden on body/html disabled Android Chrome's Pull-to-Refresh */
+  /*overflow: hidden;*/
 }
 
 .main {
@@ -91,8 +96,6 @@ html, body {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-
-  background: #181743;
 }
 
 .logo-wrap {
